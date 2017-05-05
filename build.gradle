@@ -1,6 +1,12 @@
 apply plugin: 'groovy'
 
 repositories {
-	jcenter()
+    jcenter()
+}
+
+dependencies {
+    compile "org.apache.poi:poi:$apachePoiVersion"
+    compile "org.apache.poi:poi-ooxml:$apachePoiVersion"
+    compile "org.apache.poi:poi-ooxm-schemas:$apachePoiVersion"
 }
 

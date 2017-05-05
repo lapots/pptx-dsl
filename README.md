@@ -9,19 +9,19 @@ Based on Apache POI and Apache Batik
 ```
 presentation {
     // some meta information
-    filename = 'presentation.pptx'
-    
+    filename { 'presentation.pptx' }
+
     // presentation structure
     slideshow {
         slide { /* blank slide */ }
         slide {
             titleLayout {
                 title {
-                    text = 'Transactional Memory'
+                    text { 'Transactional Memory' }
                 }
                 
                 subtitle {
-                    text = 'When database meets shared memory'
+                    text { 'When database meets shared memory' }
                 }
             }
         }
@@ -31,11 +31,11 @@ presentation {
     out {
         // export as png using PPTX2PNG
         png {
-            filename = 'export_png'
+            filename { 'export_png' }
         }
         // export as svg using PPTX2SVG
         svg {
-            filename = 'export_svg'
+            filename { 'export_svg' }
         }
     }    
 }
