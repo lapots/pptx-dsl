@@ -28,7 +28,7 @@ presentation {
     }
     
     // ability to export
-    out {
+    export {
         // export as png using PPTX2PNG
         png {
             filename { 'export_png' }

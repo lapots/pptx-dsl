@@ -2,10 +2,7 @@ import com.lapots.dsl.pptx.PPTXRunner
 
 def dsl = """
 presentation {
-    // some meta information
-    filename { "presentation.pptx" }
-
-    // presentation structure
+    filename = 'presentation.pptx'
     slideshow {
         slide { /* blank slide */ }
         slide {
@@ -20,14 +17,10 @@ presentation {
             }
         }
     }
-
-    // ability to export
-    out {
-        // export as png using PPTX2PNG
+    export {
         png {
             filename { 'export_png' }
         }
-        // export as svg using PPTX2SVG
         svg {
             filename { 'export_svg' }
         }
