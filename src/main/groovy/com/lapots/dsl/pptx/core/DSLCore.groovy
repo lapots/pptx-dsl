@@ -6,8 +6,8 @@ import com.lapots.dsl.pptx.core.slideshow.Slideshow
  * Core class that evaluates dsl.
  */
 class DSLCore {
-    def filename
     def slideshow
+    def filename
 
     def eval_str(closure) {
         def shellClosure = new GroovyShell().evaluate("{ -> $closure }")
@@ -21,10 +21,10 @@ class DSLCore {
         closure.setResovleStrategy = Closure.DELEGATE_ONLY
         closure()
 
-        println "Filename: $filename"
-
-        // ready to output
-        slideshow.file = new FileInputStream(filename)
+        // save
+        def fos = new FileOutputStream(filename)
+        slideshow.pptx.write(fos)
+        fos.close()
     }
 
     def slideshow(closure) {

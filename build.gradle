@@ -5,8 +5,13 @@ repositories {
 }
 
 dependencies {
+    compile "org.codehaus.groovy:groovy-all:$groovyVersion"
     compile "org.apache.poi:poi:$apachePoiVersion"
     compile "org.apache.poi:poi-ooxml:$apachePoiVersion"
-    compile "org.apache.poi:poi-ooxm-schemas:$apachePoiVersion"
+    compile "org.apache.poi:poi-ooxml-schemas:$apachePoiVersion"
 }
 
+task run(dependsOn: classes, type: JavaExec) {
+    main = 'script'
+    classpath = sourceSets.main.runtimeClasspath
+}

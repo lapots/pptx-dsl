@@ -40,3 +40,25 @@ presentation {
     }    
 }
 ```
+
+# Current state
+
+```
+presentation {
+    filename { 'presentation.pptx' }
+    slideshow {
+        slide { /* blank slide */ }
+        slide {
+            titleLayout {
+                title {
+                    text { 'Transactional Memory' }
+                }
+
+                subtitle {
+                    text { 'When database meets shared memory' }
+                }
+            }
+        }
+    }
+}
+```

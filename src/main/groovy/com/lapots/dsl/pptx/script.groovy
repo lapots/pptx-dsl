@@ -2,9 +2,8 @@ import com.lapots.dsl.pptx.PPTXRunner
 
 def dsl = """
 presentation {
-    filename = 'presentation.pptx'
+    filename { 'presentation.pptx' }
     slideshow {
-        slide { /* blank slide */ }
         slide {
             titleLayout {
                 title {
@@ -16,6 +15,7 @@ presentation {
                 }
             }
         }
+        slide { /* blank slide */ }
     }
     export {
         png {
