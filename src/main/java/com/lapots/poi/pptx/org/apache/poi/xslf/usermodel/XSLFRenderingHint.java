@@ -1,4 +1,4 @@
-package org.apache.poi.xslf.usermodel;
+package com.lapots.poi.pptx.org.apache.poi.xslf.usermodel;
 
 import org.apache.poi.util.Internal;
 

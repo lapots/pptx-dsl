@@ -1,8 +1,9 @@
-package org.apache.poi.xslf.usermodel;
+package com.lapots.poi.pptx.org.apache.poi.xslf.usermodel;
 
 import org.apache.batik.transcoder.wmf.tosvg.WMFPainter;
 import org.apache.batik.transcoder.wmf.tosvg.WMFRecordStore;
 import org.apache.poi.openxml4j.opc.PackagePart;
+import org.apache.poi.xslf.usermodel.XSLFPictureData;
 
 import javax.imageio.ImageIO;
 import java.awt.*;

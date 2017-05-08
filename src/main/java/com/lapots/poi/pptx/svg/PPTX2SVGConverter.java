@@ -2,9 +2,9 @@ package com.lapots.poi.pptx.svg;
 
 import org.apache.batik.anim.dom.SVGDOMImplementation;
 import org.apache.batik.svggen.SVGGraphics2D;
-import org.apache.poi.xslf.usermodel.WMFImageRender;
+import com.lapots.poi.pptx.org.apache.poi.xslf.usermodel.WMFImageRender;
 import org.apache.poi.xslf.usermodel.XMLSlideShow;
-import org.apache.poi.xslf.usermodel.XSLFRenderingHint;
+import com.lapots.poi.pptx.org.apache.poi.xslf.usermodel.XSLFRenderingHint;
 import org.apache.poi.xslf.usermodel.XSLFSlide;
 import org.w3c.dom.DOMImplementation;
 import org.w3c.dom.Document;
