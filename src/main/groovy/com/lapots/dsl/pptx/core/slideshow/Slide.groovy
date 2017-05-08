@@ -1,5 +1,6 @@
 package com.lapots.dsl.pptx.core.slideshow
 
+import com.lapots.dsl.pptx.core.CommonDelegateTrait
 import com.lapots.dsl.pptx.core.slideshow.layout.TitleLayout
 import org.apache.poi.xslf.usermodel.SlideLayout
 import org.apache.poi.xslf.usermodel.XMLSlideShow
@@ -9,7 +10,7 @@ import org.apache.poi.xslf.usermodel.XSLFSlideMaster
 /**
  * Presentation slide.
  */
-class Slide {
+class Slide implements CommonDelegateTrait {
     XMLSlideShow ppt
     XSLFSlide pptSlide
 
@@ -19,9 +20,7 @@ class Slide {
     def titleLayout(closure) {
         pptSlide = ppt.createSlide(defaultMaster.getLayout(SlideLayout.TITLE))
         def titleLayout = new TitleLayout(pptSlide: pptSlide)
-        closure.delegate = titleLayout
-        closure.setResolveStrategy = Closure.DELEGATE_ONLY
-        closure()
+        delegateOnly(closure, titleLayout)
     }
 
     def blankLayout() {

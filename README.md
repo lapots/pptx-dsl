@@ -31,11 +31,12 @@ presentation {
     export {
         // export as png using PPTX2PNG
         png {
-            filename { 'export_png' }
+            // represents the name of seed - single element of presentation
+            exportName { 'export_png' }
         }
         // export as svg using PPTX2SVG
         svg {
-            filename { 'export_svg' }
+            exportName { 'export_svg' }
         }
     }    
 }

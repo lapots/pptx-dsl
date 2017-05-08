@@ -1,17 +1,16 @@
 package com.lapots.dsl.pptx.core.slideshow
 
+import com.lapots.dsl.pptx.core.CommonDelegateTrait
 import org.apache.poi.xslf.usermodel.XMLSlideShow
 
 /**
  * Handles presentation body.
  */
-class Slideshow {
+class Slideshow implements CommonDelegateTrait {
     @Lazy XMLSlideShow pptx = new XMLSlideShow()
     def slide(closure) {
         def slide = new Slide(ppt: pptx)
-        closure.delegate = slide
-        closure.setResolveStrategy = Closure.DELEGATE_ONLY
-        closure()
+        delegateOnly(closure, slide)
 
         if (!slide.pptSlide) {
             slide.blankLayout()

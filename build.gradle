@@ -1,14 +1,23 @@
 apply plugin: 'groovy'
+apply plugin: 'java'
 
 repositories {
     jcenter()
+    mavenCentral()
 }
 
 dependencies {
     compile "org.codehaus.groovy:groovy-all:$groovyVersion"
+
     compile "org.apache.poi:poi:$apachePoiVersion"
     compile "org.apache.poi:poi-ooxml:$apachePoiVersion"
     compile "org.apache.poi:poi-ooxml-schemas:$apachePoiVersion"
+
+    compile "org.apache.xmlgraphics:batik-svggen:$apacheBatikVersion"
+    compile "org.apache.xmlgraphics:batik-transcoder:$apacheBatikVersion"
+    compile "org.apache.xmlgraphics:batik-svg-dom:$apacheBatikVersion"
+    compile "org.apache.xmlgraphics:batik-constants:$apacheBatikVersion"
+    compile "org.apache.xmlgraphics:batik-i18n:$apacheBatikVersion"
 }
 
 task run(dependsOn: classes, type: JavaExec) {

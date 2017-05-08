@@ -19,10 +19,10 @@ presentation {
     }
     export {
         png {
-            filename { 'export_png' }
+            exportName { 'presentation' }
         }
         svg {
-            filename { 'export_svg' }
+            exportName { 'presentation' }
         }
     }
 }
