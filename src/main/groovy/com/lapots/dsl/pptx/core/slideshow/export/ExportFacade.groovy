@@ -12,6 +12,8 @@ class ExportFacade implements CommonDelegateTrait {
     def png(closure) {
         def pngExport = new PngExport(slideshow: slideshowToExport)
         delegateOnly(closure, pngExport)
+
+        exportChain << pngExport
     }
 
     def svg(closure) {
