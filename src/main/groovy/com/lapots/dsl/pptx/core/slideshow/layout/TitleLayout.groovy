@@ -6,6 +6,9 @@ import org.apache.poi.xslf.usermodel.XSLFSlide
 
 /**
  * Handles presentation TITLE layout.
+ *
+ * |   Title    |
+ * |  subtitle  |
  */
 class TitleLayout implements CommonDelegateTrait {
     XSLFSlide pptSlide

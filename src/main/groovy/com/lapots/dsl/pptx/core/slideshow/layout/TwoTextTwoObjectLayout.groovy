@@ -6,6 +6,12 @@ import org.apache.poi.xslf.usermodel.XSLFSlide
 
 /**
  * Handles TWO_TX_TWO_OBJ layout.
+ *
+ * | Title             |
+ * |  text   |  text   |
+ * |         |         |
+ * | content | content |
+ * |         |         |
  */
 class TwoTextTwoObjectLayout implements CommonDelegateTrait {
     XSLFSlide pptSlide

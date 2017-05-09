@@ -6,6 +6,9 @@ import org.apache.poi.xslf.usermodel.XSLFSlide
 
 /**
  * Handles SECTION_HEADER layout.
+ *
+ * |Title      |
+ * |subtitle   |
  */
 class SectionHeaderLayout implements CommonDelegateTrait {
     XSLFSlide pptSlide

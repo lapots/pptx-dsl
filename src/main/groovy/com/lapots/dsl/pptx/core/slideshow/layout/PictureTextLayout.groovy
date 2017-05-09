@@ -6,6 +6,11 @@ import org.apache.poi.xslf.usermodel.XSLFSlide
 
 /**
  * Handles PIC_TX layout.
+ *
+ *      | Title |
+ *      | text  |         |
+ *      |       | picture |
+ *      |       |         |
  */
 class PictureTextLayout implements CommonDelegateTrait {
     XSLFSlide pptSlide

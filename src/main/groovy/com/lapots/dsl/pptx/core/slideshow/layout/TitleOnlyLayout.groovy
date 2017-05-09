@@ -6,6 +6,10 @@ import org.apache.poi.xslf.usermodel.XSLFSlide
 
 /**
  * Handles TITLE_ONLY layout
+ *
+ * | Title |
+ * |       |
+ * |       |
  */
 class TitleOnlyLayout implements CommonDelegateTrait {
     XSLFSlide pptSlide

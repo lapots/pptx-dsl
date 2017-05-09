@@ -6,6 +6,11 @@ import org.apache.poi.xslf.usermodel.XSLFSlide
 
 /**
  * Implements OBJ_TX layout
+ *
+ *      | Title |
+ *      | text  |         |
+ *      |       | content |
+ *      |       |         |
  */
 class ObjectTextLayout implements CommonDelegateTrait {
     XSLFSlide pptSlide
