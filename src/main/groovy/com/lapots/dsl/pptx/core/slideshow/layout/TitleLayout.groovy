@@ -5,7 +5,7 @@ import com.lapots.dsl.pptx.core.slideshow.text.SlideshowText
 import org.apache.poi.xslf.usermodel.XSLFSlide
 
 /**
- * Handles presentation title layout.
+ * Handles presentation TITLE layout.
  */
 class TitleLayout implements CommonDelegateTrait {
     XSLFSlide pptSlide

@@ -23,6 +23,10 @@ class Slide implements CommonDelegateTrait {
         delegateOnly(closure, titleLayout)
     }
 
+    /**
+     * Handles BLANK layout
+     * @return none
+     */
     def blankLayout() {
         pptSlide = ppt.createSlide()
     }
