@@ -25,16 +25,25 @@ presentation {
                 }
             }
         }
+                slide {
+                    titleContentLayout {
+                        title {
+                            text { 'Image example' }
+                        }
+                        
+                        content {
+                            image { 'L://sample.png' }
+                        }
+                    }
+                }
     }
     
-    // ability to export
     export {
-        // export as png using PPTX2PNG
         png {
             // represents the name of seed - single element of presentation
+            // every slide will be export_png-slide-0.png etc.
             exportName { 'export_png' }
         }
-        // export as svg using PPTX2SVG
         svg {
             exportName { 'export_svg' }
         }
