@@ -2,7 +2,7 @@
 DSL for presentation (pptx) generation from the code.
 The idea is to provide an ability to generate presentation from the inside of some application with just data.
 
-# Example (just a goal template)
+# Example
 
 Based on Apache POI and Apache Batik
 
@@ -39,27 +39,5 @@ presentation {
             exportName { 'export_svg' }
         }
     }    
-}
-```
-
-# Current state
-
-```
-presentation {
-    filename { 'presentation.pptx' }
-    slideshow {
-        slide { /* blank slide */ }
-        slide {
-            titleLayout {
-                title {
-                    text { 'Transactional Memory' }
-                }
-
-                subtitle {
-                    text { 'When database meets shared memory' }
-                }
-            }
-        }
-    }
 }
 ```
