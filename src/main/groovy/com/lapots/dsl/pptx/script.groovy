@@ -1,7 +1,4 @@
 import com.lapots.dsl.pptx.PPTXRunner
-import org.apache.poi.xslf.usermodel.SlideLayout
-import org.apache.poi.xslf.usermodel.XMLSlideShow
-import org.apache.poi.xslf.usermodel.XSLFSlideLayout
 
 def dsl = """
 presentation {
@@ -30,6 +27,9 @@ presentation {
     }
 }
 """
+
+PPTXRunner.resource_str(dsl)
+
 /**
  * To implement layouts ( -> [Power Point name]) :
  *      +TITLE (title, subtitle) -> Title Slide
