@@ -16,6 +16,17 @@ presentation {
             }
         }
         slide { /* blank slide */ }
+        slide {
+            titleContentLayout {
+                title {
+                    text { 'Image example' }
+                }
+                
+                content {
+                    image { 'L://groovy_project/misc/pptx-dsl/src/main/resources/sample.png' }
+                }
+            }
+        }
     }
     export {
         png {

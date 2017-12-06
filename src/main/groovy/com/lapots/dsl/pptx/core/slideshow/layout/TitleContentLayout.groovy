@@ -2,7 +2,14 @@ package com.lapots.dsl.pptx.core.slideshow.layout
 
 import com.lapots.dsl.pptx.core.CommonDelegateTrait
 import com.lapots.dsl.pptx.core.slideshow.text.SlideshowText
+import org.apache.poi.sl.usermodel.PictureData
+import org.apache.poi.util.IOUtils
+import org.apache.poi.xslf.usermodel.XMLSlideShow
+import org.apache.poi.xslf.usermodel.XSLFPictureData
+import org.apache.poi.xslf.usermodel.XSLFShape
 import org.apache.poi.xslf.usermodel.XSLFSlide
+
+import java.awt.geom.Rectangle2D
 
 /**
  * Handles TITLE_AND_CONTENT layout.
@@ -14,6 +21,7 @@ import org.apache.poi.xslf.usermodel.XSLFSlide
  */
 class TitleContentLayout implements CommonDelegateTrait {
     XSLFSlide pptSlide
+    XMLSlideShow ppt
 
     def title(closure) {
         def text = new SlideshowText(index: 0, pptSlide: pptSlide)
@@ -21,6 +29,26 @@ class TitleContentLayout implements CommonDelegateTrait {
     }
 
     def content(closure) {
-        // TODO: implement
+        // content type may vary
+        delegateOnly(closure);
+    }
+
+    def image(closure) {
+        def img = closure() as String
+        def pictureData = IOUtils.toByteArray(new FileInputStream(img))
+
+        def pd = ppt.addPicture(pictureData, PictureData.PictureType.PNG)
+        def pic = pptSlide.createPicture(pd)
+
+        def anchor = clearPlaceholder(1)
+        pic.setAnchor(anchor)
+    }
+
+    def clearPlaceholder(index) {
+        XSLFShape pic = pptSlide.getShapes()[1]
+        Rectangle2D anchor = pic.getAnchor()
+        pptSlide.removeShape(pic)
+
+        anchor
     }
 }
