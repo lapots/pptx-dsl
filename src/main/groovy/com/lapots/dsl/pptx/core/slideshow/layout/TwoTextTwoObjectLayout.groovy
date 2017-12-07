@@ -15,8 +15,7 @@ import org.apache.poi.xslf.usermodel.XSLFSlide
  */
 class TwoTextTwoObjectLayout implements CommonDelegateTrait {
     XSLFSlide pptSlide
-    int textIndex = 1
-    int contentIndex = 1
+    def index
 
     def title(closure) {
         def text = new SlideshowText(index: 0, pptSlide: pptSlide)
