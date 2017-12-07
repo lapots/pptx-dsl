@@ -1,12 +1,10 @@
 package com.lapots.dsl.pptx.core.slideshow.layout
 
 import com.lapots.dsl.pptx.core.CommonDelegateTrait
+import com.lapots.dsl.pptx.core.slideshow.layout.util.LayoutSupportUtils
 import com.lapots.dsl.pptx.core.slideshow.text.SlideshowText
-import org.apache.poi.sl.usermodel.PictureData
 import org.apache.poi.util.IOUtils
 import org.apache.poi.xslf.usermodel.XMLSlideShow
-import org.apache.poi.xslf.usermodel.XSLFPictureData
-import org.apache.poi.xslf.usermodel.XSLFShape
 import org.apache.poi.xslf.usermodel.XSLFSlide
 
 import java.awt.geom.Rectangle2D
@@ -37,18 +35,11 @@ class TitleContentLayout implements CommonDelegateTrait {
         def img = closure() as String
         def pictureData = IOUtils.toByteArray(new FileInputStream(img))
 
-        def pd = ppt.addPicture(pictureData, PictureData.PictureType.PNG)
+        def pd = ppt.addPicture(pictureData, LayoutSupportUtils.resolvePictureTypeByFile(img))
         def pic = pptSlide.createPicture(pd)
 
-        def anchor = clearPlaceholder(1)
+        def anchor = LayoutSupportUtils.clearPlaceholderWithAnchor(1, pptSlide)
         pic.setAnchor(anchor)
     }
 
-    def clearPlaceholder(index) {
-        XSLFShape pic = pptSlide.getShapes()[1]
-        Rectangle2D anchor = pic.getAnchor()
-        pptSlide.removeShape(pic)
-
-        anchor
-    }
 }

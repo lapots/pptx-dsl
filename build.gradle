@@ -19,6 +19,8 @@ dependencies {
     compile "org.apache.xmlgraphics:batik-constants:$apacheBatikVersion"
     compile "org.apache.xmlgraphics:batik-i18n:$apacheBatikVersion"
     compile "org.apache.xmlgraphics:batik-codec:$apacheBatikVersion"
+
+    compile "commons-io:commons-io:$commonsIoVersion"
 }
 
 task run(dependsOn: classes, type: JavaExec) {
