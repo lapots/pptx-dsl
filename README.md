@@ -2,6 +2,14 @@
 DSL for presentation (pptx) generation from the code.
 The idea is to provide an ability to generate presentation from the inside of some application with just data.
 
+# TODO
+
+* implement more layouts
+* implement more image type supports
+* implement text styling
+* implement 2D primitives support
+* implement animation support
+
 # Example
 
 Based on Apache POI and Apache Batik
