@@ -58,3 +58,9 @@ presentation {
     }    
 }
 ```
+# Supported layouts
+
+* blank
+* title
+* title only
+* title and content

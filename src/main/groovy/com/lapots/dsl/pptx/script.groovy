@@ -46,7 +46,7 @@ PPTXRunner.resource_str(dsl)
  *      +TITLE (title, subtitle) -> Title Slide
  *      +TITLE_ONLY (title) -> Title Only
  *      +BLANK () -> Blank
- *      +-TITLE_AND_CONTENT (title, content) -> Title and Content
+ *      +TITLE_AND_CONTENT (title, content) -> Title and Content
  *      +-VERT_TX (title, vertical text) -> ?
  *      +-VERT_TITLE_AND_TX (vertical title, vertical text) -> ?
  *      +-TWO_OBJ (title, content, content) -> Two Content
