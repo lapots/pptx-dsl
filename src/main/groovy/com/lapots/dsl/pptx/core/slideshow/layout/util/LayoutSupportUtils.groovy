@@ -13,7 +13,6 @@ class LayoutSupportUtils {
         XSLFShape pic = slide.getShapes()[index]
         Rectangle2D anchor = pic.getAnchor()
         slide.removeShape(pic)
-
         anchor
     }
 
@@ -31,7 +30,7 @@ class LayoutSupportUtils {
 
     def static addPicture(img, ppt, pptSlide, index) {
         def pictureData = IOUtils.toByteArray(new FileInputStream(img))
-        def pd = ppt.addPicture(pictureData, resolvePictureTypeByFile(img))
+        def pd = ppt.addPicture(pictureData as byte[], resolvePictureTypeByFile(img))
         def pic = pptSlide.createPicture(pd)
 
         def anchor = clearPlaceholderWithAnchor(index, pptSlide)

@@ -5,35 +5,21 @@ presentation {
     filename { 'presentation.pptx' }
     slideshow {
         slide {
-            titleLayout {
+            twoObjectLayout {
                 title {
-                    text { 'Transactional Memory' }
-                }
-
-                subtitle {
-                    text { 'When database meets shared memory' }
-                }
-            }
-        }
-        slide { /* blank slide */ }
-        slide {
-            titleContentLayout {
-                title {
-                    text { 'Image example' }
+                    text { 'Double content' }
                 }
                 
                 content {
-                    image { 'L://groovy_project/misc/pptx-dsl/src/main/resources/sample.png' }
+                    left {
+                        image { 'L://groovy_project/misc/pptx-dsl/src/main/resources/sample.png' }
+                    }
+                    
+                    right {
+                        image { 'L://groovy_project/misc/pptx-dsl/src/main/resources/sample.png' }
+                    }
                 }
             }
-        }
-    }
-    export {
-        png {
-            exportName { 'presentation' }
-        }
-        svg {
-            exportName { 'presentation' }
         }
     }
 }
@@ -47,9 +33,9 @@ PPTXRunner.resource_str(dsl)
  *      +TITLE_ONLY (title) -> Title Only
  *      +BLANK () -> Blank
  *      +TITLE_AND_CONTENT (title, content) -> Title and Content
+ *      +TWO_OBJ (title, content, content) -> Two Content
  *      +-VERT_TX (title, vertical text) -> ?
  *      +-VERT_TITLE_AND_TX (vertical title, vertical text) -> ?
- *      +-TWO_OBJ (title, content, content) -> Two Content
  *      +-SECTION_HEADER (title, text) -> Section Header
  *      +-TWO_TX_TWO_OBJ (title, text, content, text, content) -> Comparison
  *      +-OBJ_TX (title, content, text) -> Content with Caption

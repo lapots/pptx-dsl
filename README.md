@@ -33,17 +33,34 @@ presentation {
                 }
             }
         }
-                slide {
-                    titleContentLayout {
-                        title {
-                            text { 'Image example' }
-                        }
-                        
-                        content {
-                            image { 'L://sample.png' }
-                        }
+        slide {
+            titleContentLayout {
+                title {
+                    text { 'Image example' }
+                }
+                
+                content {
+                    image { 'L://sample.png' }
+                }
+            }
+        }
+        slide {
+            twoObjectLayout {
+                title {
+                    text { 'Two images' }
+                }
+                
+                content {
+                    left {
+                        image { 'L://sample.png' }
+                    }
+                    
+                    right {
+                        image { 'L://sample.png' }
                     }
                 }
+            }
+        }
     }
     
     export {
@@ -64,3 +81,4 @@ presentation {
 * title
 * title only
 * title and content
+* two object layout
