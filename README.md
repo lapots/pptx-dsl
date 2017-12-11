@@ -25,18 +25,29 @@ presentation {
         slide {
             titleLayout {
                 title {
-                    text { 'Transactional Memory' }
+                    text { 
+                        data { 'Transactional Memory' }
+                    }
                 }
                 
                 subtitle {
-                    text { 'When database meets shared memory' }
+                    text { 
+                        data { 'When database meets shared memory' }
+                    }
                 }
             }
         }
         slide {
             titleContentLayout {
                 title {
-                    text { 'Image example' }
+                    text {
+                        data { 'Image example' }
+                        format {
+                            fontSize 24
+                            fontItalic true
+                            fontColor 'blue'
+                        }
+                    }
                 }
                 
                 content {
@@ -47,14 +58,16 @@ presentation {
         slide {
             twoObjectLayout {
                 title {
-                    text { 'Two images' }
+                    text { 
+                        data { 'Two images' } 
+                    }
                 }
                 
                 content {
                     left {
                         image { 'L://sample.png' }
                     }
-                    
+                    // ISSUE WITH SAME OR MULTIPLE IMAGES
                     right {
                         image { 'L://sample.png' }
                     }
