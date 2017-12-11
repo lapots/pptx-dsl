@@ -7,7 +7,14 @@ presentation {
         slide {
             twoObjectLayout {
                 title {
-                    text { 'Double content' }
+                    text {
+                        data { 'Two object layout' }
+                        format {
+                            fontSize 24
+                            fontItalic true
+                            fontColor 'blue'
+                        }
+                    }
                 }
                 
                 content {
@@ -15,9 +22,7 @@ presentation {
                         image { 'L://groovy_project/misc/pptx-dsl/src/main/resources/sample.png' }
                     }
                     
-                    right {
-                        image { 'L://groovy_project/misc/pptx-dsl/src/main/resources/sample.png' }
-                    }
+                    // cannot use both for now
                 }
             }
         }

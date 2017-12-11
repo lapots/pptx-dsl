@@ -28,11 +28,13 @@ class LayoutSupportUtils {
         }
     }
 
+    // TODO: investigate issue with multiple images and indexing
     def static addPicture(img, ppt, pptSlide, index) {
         def pictureData = IOUtils.toByteArray(new FileInputStream(img))
         def pd = ppt.addPicture(pictureData as byte[], resolvePictureTypeByFile(img))
         def pic = pptSlide.createPicture(pd)
 
+        // TODO: investigate possible issue with indexing due to clearing placeholder
         def anchor = clearPlaceholderWithAnchor(index, pptSlide)
         pic.setAnchor(anchor)
     }
